@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Chat History</title>
+    <link rel="stylesheet" href="/css/claude-sidebar.css">
+</head>
+<body>
+    <div class="claude-container">
+        <header class="main-header">
+            <h1>🤖 Claude Chat History</h1>
+            <p class="subtitle">Browse your Claude Code conversations</p>
+        </header>
+        
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number"><%= stats.totalConversations %></div>
+                <div class="stat-label">Total Conversations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><%= stats.totalMessages %></div>
+                <div class="stat-label">Total Messages</div>
+            </div>
+        </div>
+        
+        <div class="conversations-section">
+            <div class="section-header">
+                <h2 class="section-title">Conversations</h2>
+                <a href="#" class="find-link" title="Find in conversations">🔍 Find</a>
+            </div>
+            <div class="find-input-container" style="display: none;">
+                <input type="text" class="find-input" placeholder="Type to find in conversations..." />
+                <span class="find-results-count"></span>
+            </div>
+            
+            <div class="chat-list">
+            <% chats.forEach(chat => { %>
+                <div class="chat-card" 
+                     data-title="<%= chat.firstMessage || '' %>"
+                     data-summary="<%= chat.summary.replace(/<[^>]*>/g, '') %>"
+                     data-searchable="<%= chat.searchableText || '' %>"
+                     data-date="<%= chat.modifiedTime %>">
+                    <a href="/chat/<%= chat.id %>" class="chat-link">
+                        <div class="chat-content">
+                            <div class="chat-row">
+                                <span class="chat-date"><%= moment(chat.modifiedTime).format('MMM D, YYYY h:mm A') %></span>
+                                <span class="chat-separator"> - </span>
+                                <span class="chat-title">
+                                    <%= chat.firstMessage || 'Untitled Chat' %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="chat-summary">
+                        <div class="summary-header">💡 Summary</div>
+                        <div class="summary-text">
+                            <%- chat.summary %>
+                        </div>
+                    </div>
+                    <div class="chat-footer">
+                        <div class="footer-left">
+                            <span class="message-count">💬 <%= chat.messageCount %> messages</span>
+                            <a href="/download/<%= chat.id %>" class="download-link" title="Download as Markdown">📥 Download</a>
+                        </div>
+                    </div>
+                    <div class="match-count-line" style="display: none;">
+                        <span class="match-count"></span>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+        </div>
+    </div>
+    <script src="/js/search.js"></script>
+</body>
+</html>

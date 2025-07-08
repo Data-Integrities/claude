@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat <%= chatId.substring(0, 8) %> - Claude History</title>
+    <link rel="stylesheet" href="/css/claude-chat.css">
+</head>
+<body>
+    <div class="claude-container">
+        <header class="claude-header">
+            <div class="header-top">
+                <a href="/" class="back-link">← Back</a>
+                <span class="chat-date"><%= moment(messages[0]?.timestamp || new Date()).format('MMM D, YYYY h:mm A') %></span>
+            </div>
+            <div class="header-middle">
+                <h1 class="chat-title"><%= messages.find(m => m.role === 'user')?.content?.substring(0, 100) || 'Chat' %></h1>
+                <span class="message-count"><%= messageCount %> messages</span>
+            </div>
+            <div class="header-bottom">
+                <!-- Search removed - users can use browser Ctrl+F -->
+            </div>
+        </header>
+        
+        <main class="claude-chat">
+            <% messages.forEach((msg, index) => { %>
+                <div class="claude-message" id="msg-<%= index %>">
+                    <div class="message-role-container">
+                        <span class="message-role <%= msg.role || 'system' %>"><%= (msg.role || 'System').charAt(0).toUpperCase() + (msg.role || 'System').slice(1) %></span>
+                        <% if (msg.timestamp) { %>
+                            <span class="message-time"><%= moment(msg.timestamp).format('h:mm A') %></span>
+                        <% } %>
+                    </div>
+                    <div class="message-content-container">
+                        <% if (msg.content || msg.htmlContent) { %>
+                            <% if (msg.htmlContent) { %>
+                                <%- msg.htmlContent %>
+                            <% } else { %>
+                                <%= msg.content %>
+                            <% } %>
+                        <% } else { %>
+                            <em class="no-content">No content</em>
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>
+        </main>
+    </div>
+    <script src="/js/chat-search.js"></script>
+</body>
+</html>
