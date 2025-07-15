@@ -1,30 +1,30 @@
 [
   {
-    "id": "4410a885-4a9f-4262-ad46-33cdf6884bd9",
+    "id": "754dbfe4-c373-4eb5-9e11-653142f6faa2",
     "project": "Taxes",
-    "date": "2025-07-14T20:57:05.895Z",
-    "firstSentence": "sorry, shift enter isn't working here for some reason.",
-    "oneLineSummary": "Discussion about intelligentstatementparser with institution-specific formats involving node.js.",
+    "date": "2025-07-15T01:07:16.178Z",
+    "firstSentence": "somehow I lost connection to the last chat, and it's lost.",
     "bulletSummary": [
-      "Implemented intelligentstatementparser with institution-specific formats",
-      "Implemented with statementformat interface)",
-      "Implemented intelligentstatementparser with institution-specific formats",
-      "Implemented an automation solution",
-      "Implemented pdf statement parser with ocr capabilities",
-      "Worked with node.js",
-      "Worked with intelligentstatementparser.ts",
-      "Worked with statementanalyzer.ts"
+      "Implemented a prior chat viewer some time ago",
+      "Implemented a solution to extract the most relevant recent context without overwhelming the system",
+      "Implemented a smart context extraction tool",
+      "Implemented public share links",
+      "Implemented a complete solution that:",
+      "Worked with extract-chat-context.ts",
+      "Worked with tax_document_analysis_readme.md",
+      "Worked with analyze-documents-with-claude.ts"
     ],
-    "paragraphSummary": "This conversation focused on intelligentstatementparser with institution-specific formats. Key files involved include node.js, intelligentstatementparser.ts, statementanalyzer.ts. Additional work included with statementformat interface) and intelligentstatementparser with institution-specific formats. The discussion covered 1597 messages with 194 main accomplishments.",
-    "messageCount": 2458,
-    "lastMessageTimestamp": "2025-07-14T20:57:05.766Z",
+    "messageCount": 98,
+    "lastMessageTimestamp": "2025-07-15T01:07:16.161Z",
     "needsAnalysis": false,
-    "lastAnalyzed": "2025-07-14T21:00:51.973Z"
+    "oneLineSummary": "Discussion about a prior chat viewer some time ago involving extract-chat-context.ts.",
+    "paragraphSummary": "This conversation focused on a prior chat viewer some time ago. Key files involved include extract-chat-context.ts, tax_document_analysis_readme.md, analyze-documents-with-claude.ts. Additional work included a solution to extract the most relevant recent context without overwhelming the system and a smart context extraction tool. The discussion covered 66 messages with 7 main accomplishments.",
+    "lastAnalyzed": "2025-07-15T01:23:18.731Z"
   },
   {
     "id": "cb42d35d-b81a-4b75-a572-c4a9f4879559",
     "project": "claude",
-    "date": "2025-07-14T20:41:06.570Z",
+    "date": "2025-07-15T00:26:26.918Z",
     "firstSentence": "what folder are you checking to find the current and prior claude code chat histories?",
     "oneLineSummary": "Discussion about a file called history-index involving server.js.",
     "bulletSummary": [
@@ -37,14 +37,54 @@
       "Worked with history-index.json",
       "Worked with claude.md"
     ],
-    "paragraphSummary": "This conversation focused on a file called history-index. Key files involved include server.js, history-index.json, claude.md. Additional work included a system that speaks the completion announcement using text-to-speech and one for you that would serve as a global configuration. The discussion covered 310 messages with 21 main accomplishments.",
-    "messageCount": 466,
-    "lastMessageTimestamp": "2025-07-14T20:41:06.475Z"
+    "paragraphSummary": "This conversation focused on a file called history-index. Key files involved include server.js, history-index.json, claude.md. Additional work included a system that speaks the completion announcement using text-to-speech and one for you that would serve as a global configuration. The discussion covered 344 messages with 25 main accomplishments.",
+    "messageCount": 521,
+    "lastMessageTimestamp": "2025-07-15T00:26:26.782Z"
+  },
+  {
+    "id": "4410a885-4a9f-4262-ad46-33cdf6884bd9",
+    "project": "Taxes",
+    "date": "2025-07-15T00:19:21.329Z",
+    "firstSentence": "sorry, shift enter isn't working here for some reason.",
+    "oneLineSummary": "Discussion about intelligentstatementparser with institution-specific formats involving node.js.",
+    "bulletSummary": [
+      "Implemented intelligentstatementparser with institution-specific formats",
+      "Implemented with statementformat interface)",
+      "Implemented intelligentstatementparser with institution-specific formats",
+      "Implemented an automation solution",
+      "Implemented pdf statement parser with ocr capabilities",
+      "Worked with node.js",
+      "Worked with intelligentstatementparser.ts",
+      "Worked with statementanalyzer.ts"
+    ],
+    "paragraphSummary": "This conversation focused on intelligentstatementparser with institution-specific formats. Key files involved include node.js, intelligentstatementparser.ts, statementanalyzer.ts. Additional work included with statementformat interface) and intelligentstatementparser with institution-specific formats. The discussion covered 1700 messages with 220 main accomplishments.",
+    "messageCount": 2605,
+    "lastMessageTimestamp": "2025-07-15T00:19:21.280Z"
+  },
+  {
+    "id": "c2464134-5973-43ef-befc-562f2938a530",
+    "project": "ai",
+    "date": "2025-07-14T22:48:45.442Z",
+    "firstSentence": "Here's a new thread context starter for the next session:\n\n⏺ Write(CONTINUE_THREAD.",
+    "oneLineSummary": "Discussion about - **ai command hub**: central brain using claude ai for natural involving continue_thread.md.",
+    "bulletSummary": [
+      "Implemented - **ai command hub**: central brain using claude ai for natural",
+      "Implemented a comprehensive thread starter in continue_thread",
+      "Implemented in wrapper)",
+      "Implemented the container and vm deployment functionality for the backend ai project",
+      "Worked with continue_thread.md",
+      "Worked with thread_context.md",
+      "Worked with proxmoxapiwrapper.ts",
+      "50 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation focused on - **ai command hub**: central brain using claude ai for natural. Key files involved include continue_thread.md, thread_context.md, proxmoxapiwrapper.ts. Additional work included a comprehensive thread starter in continue_thread and in wrapper). The discussion covered 50 messages with 4 main accomplishments.",
+    "messageCount": 76,
+    "lastMessageTimestamp": "2025-07-14T22:48:45.427Z"
   },
   {
     "id": "6a15721d-a118-4213-bb5e-d8c1d6702820",
     "project": "flutter",
-    "date": "2025-07-14T08:22:15.560Z",
+    "date": "2025-07-14T21:50:26.875Z",
     "firstSentence": "Project Status Summary\n\n  Completed Chain: SQLdb (deprecated) → MongoDB (current) → WebAPI →\n  Flutter App\n\n  WebAPI Architecture (just documented in ARCHITECTURE.",
     "oneLineSummary": "Discussion about comprehensive flutter app documentation now that involving architecture.md.",
     "bulletSummary": [
@@ -57,9 +97,27 @@
       "Worked with claude.md",
       "Worked with config.json"
     ],
-    "paragraphSummary": "This conversation focused on comprehensive flutter app documentation now that. Key files involved include architecture.md, claude.md, config.json. Additional work included comprehensive flutter app documentation for the my_health app and a global webcontext object. The discussion covered 1010 messages with 73 main accomplishments.",
-    "messageCount": 1557,
-    "lastMessageTimestamp": "2025-07-14T08:22:15.509Z"
+    "paragraphSummary": "This conversation focused on comprehensive flutter app documentation now that. Key files involved include architecture.md, claude.md, config.json. Additional work included comprehensive flutter app documentation for the my_health app and a global webcontext object. The discussion covered 1051 messages with 96 main accomplishments.",
+    "messageCount": 1614,
+    "lastMessageTimestamp": "2025-07-14T21:50:26.857Z"
+  },
+  {
+    "id": "2c19a6b7-c43d-4a49-a5ca-ab8f75393104",
+    "project": "ai",
+    "date": "2025-07-14T21:40:15.701Z",
+    "firstSentence": "hi claude - this is a new module for my provider-search project that lets me use ai to make changes to my homelab - either to the proxmox hosts, or the vms/containers on the hosts.",
+    "oneLineSummary": "Discussion about the repository on github:.",
+    "bulletSummary": [
+      "Implemented the repository on github:",
+      "Implemented a basic readme and",
+      "Implemented the repo or pushed anything yet - you won't be able to restore the readme from github",
+      "Implemented the original detailed readme restore it",
+      "Implemented github repository",
+      "24 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation focused on the repository on github:. Additional work included a basic readme and and the repo or pushed anything yet - you won't be able to restore the readme from github. The discussion covered 24 messages with 5 main accomplishments.",
+    "messageCount": 35,
+    "lastMessageTimestamp": "2025-07-14T21:40:15.682Z"
   },
   {
     "id": "d09a9f68-282a-42eb-9020-a78306a61c30",

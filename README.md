@@ -233,6 +233,13 @@ This documentation ensures continuity across Claude Code sessions and helps quic
 - Check for JavaScript errors in browser console
 - Manually trigger analysis: visit `/analyze-chats`
 
+## Production Access
+
+The application is deployed at: https://claude-search.dataintegrities.com/
+- Access restricted to local network (192.x.x.x addresses only)
+- SSL/TLS enabled for secure access
+- See [DEPLOYMENT.md](DEPLOYMENT.md) for infrastructure details
+
 ## Contributing
 
 This is part of the Provider Search ecosystem. For issues or suggestions:

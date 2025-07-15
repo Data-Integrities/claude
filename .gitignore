@@ -92,3 +92,12 @@ jspm_packages/
 # Temporary files
 *.tmp
 *.temp
+
+# Application specific
+history-index.json.backup
+server.log
+nohup.out
+
+# Keep the logs directory but not its contents
+logs/*
+!logs/.gitkeep
