@@ -35,10 +35,38 @@ body {
     margin: 0 0 8px 0;
 }
 
+.json-link {
+    font-size: 14px;
+    color: #666666;
+    text-decoration: none;
+    margin-left: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.json-link:hover {
+    opacity: 1;
+    color: #4a90e2;
+}
+
 .subtitle {
     font-size: 14px;
     color: #999999;
     margin: 0;
+}
+
+/* Update notification */
+.update-notification {
+    font-size: 13px;
+    color: #4a90e2;
+    margin: 8px 0 0 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.update-notification:hover {
+    color: #5fa0f2;
+    text-decoration: underline;
 }
 
 /* Stats Row */
@@ -266,12 +294,17 @@ body {
     font-size: 12px;
     color: #b8b8b8;
     line-height: 1.2;
-    white-space: pre-line;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin-left: 8px;
     margin-top: -2px;
     margin-bottom: 0px;
     padding: 0;
+}
+
+/* Tighter bullet spacing */
+.bullet-item {
+    margin: 2px 0;
+    line-height: 1.2;
 }
 
 /* Summary links */
@@ -522,4 +555,131 @@ body {
     content: "💬 ";
     opacity: 0.7;
     font-size: 12px;
+}
+
+/* Project Groups */
+.project-group {
+    margin-bottom: 32px;
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a90e2;
+    margin: 0 0 12px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+/* Analysis Results Box */
+.analysis-results {
+    background-color: #333633; /* 90% gray, 10% green tint */
+    border: 1px solid #3c3e3c;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+    position: relative;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.results-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+.results-close {
+    background: none;
+    border: none;
+    color: #999999;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.results-close:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.results-content {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+.update-summary {
+    margin-bottom: 12px;
+}
+
+.update-summary p {
+    margin: 4px 0;
+}
+
+.timing {
+    font-size: 12px;
+    color: #999999;
+    font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.updated-chats {
+    border-top: 1px solid #3c3c3c;
+    padding-top: 12px;
+}
+
+.updated-chat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.updated-chat:last-child {
+    border-bottom: none;
+}
+
+.project-name {
+    font-weight: 500;
+    color: #4a90e2;
+    min-width: 100px;
+}
+
+.chat-preview {
+    flex: 1;
+    color: #999999;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.duration {
+    color: #666666;
+    font-size: 12px;
+    font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.no-updates {
+    text-align: center;
+    color: #999999;
+    margin: 0;
+}
+
+.error {
+    color: #e74c3c;
+    margin: 0;
 }

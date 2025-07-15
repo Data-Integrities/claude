@@ -1,0 +1,488 @@
+[
+  {
+    "id": "4410a885-4a9f-4262-ad46-33cdf6884bd9",
+    "project": "Taxes",
+    "date": "2025-07-14T20:57:05.895Z",
+    "firstSentence": "sorry, shift enter isn't working here for some reason.",
+    "oneLineSummary": "Discussion about intelligentstatementparser with institution-specific formats involving node.js.",
+    "bulletSummary": [
+      "Implemented intelligentstatementparser with institution-specific formats",
+      "Implemented with statementformat interface)",
+      "Implemented intelligentstatementparser with institution-specific formats",
+      "Implemented an automation solution",
+      "Implemented pdf statement parser with ocr capabilities",
+      "Worked with node.js",
+      "Worked with intelligentstatementparser.ts",
+      "Worked with statementanalyzer.ts"
+    ],
+    "paragraphSummary": "This conversation focused on intelligentstatementparser with institution-specific formats. Key files involved include node.js, intelligentstatementparser.ts, statementanalyzer.ts. Additional work included with statementformat interface) and intelligentstatementparser with institution-specific formats. The discussion covered 1597 messages with 194 main accomplishments.",
+    "messageCount": 2458,
+    "lastMessageTimestamp": "2025-07-14T20:57:05.766Z",
+    "needsAnalysis": false,
+    "lastAnalyzed": "2025-07-14T21:00:51.973Z"
+  },
+  {
+    "id": "cb42d35d-b81a-4b75-a572-c4a9f4879559",
+    "project": "claude",
+    "date": "2025-07-14T20:41:06.570Z",
+    "firstSentence": "what folder are you checking to find the current and prior claude code chat histories?",
+    "oneLineSummary": "Discussion about a file called history-index involving server.js.",
+    "bulletSummary": [
+      "Implemented a file called history-index",
+      "Implemented a system that speaks the completion announcement using text-to-speech",
+      "Implemented one for you that would serve as a global configuration",
+      "Implemented a shared location that you manually reference",
+      "Implemented a template claude",
+      "Worked with server.js",
+      "Worked with history-index.json",
+      "Worked with claude.md"
+    ],
+    "paragraphSummary": "This conversation focused on a file called history-index. Key files involved include server.js, history-index.json, claude.md. Additional work included a system that speaks the completion announcement using text-to-speech and one for you that would serve as a global configuration. The discussion covered 310 messages with 21 main accomplishments.",
+    "messageCount": 466,
+    "lastMessageTimestamp": "2025-07-14T20:41:06.475Z"
+  },
+  {
+    "id": "6a15721d-a118-4213-bb5e-d8c1d6702820",
+    "project": "flutter",
+    "date": "2025-07-14T08:22:15.560Z",
+    "firstSentence": "Project Status Summary\n\n  Completed Chain: SQLdb (deprecated) → MongoDB (current) → WebAPI →\n  Flutter App\n\n  WebAPI Architecture (just documented in ARCHITECTURE.",
+    "oneLineSummary": "Discussion about comprehensive flutter app documentation now that involving architecture.md.",
+    "bulletSummary": [
+      "Implemented comprehensive flutter app documentation now that",
+      "Implemented comprehensive flutter app documentation for the my_health app",
+      "Implemented a global webcontext object",
+      "Implemented a new appointment, it could have been with a new doctor, so we have to refresh the careteam too",
+      "Implemented new care relationships",
+      "Worked with architecture.md",
+      "Worked with claude.md",
+      "Worked with config.json"
+    ],
+    "paragraphSummary": "This conversation focused on comprehensive flutter app documentation now that. Key files involved include architecture.md, claude.md, config.json. Additional work included comprehensive flutter app documentation for the my_health app and a global webcontext object. The discussion covered 1010 messages with 73 main accomplishments.",
+    "messageCount": 1557,
+    "lastMessageTimestamp": "2025-07-14T08:22:15.509Z"
+  },
+  {
+    "id": "d09a9f68-282a-42eb-9020-a78306a61c30",
+    "project": "Taxes",
+    "date": "2025-07-13T18:40:20.929Z",
+    "firstSentence": "claude, I want help doing my taxes - this year for 2025.",
+    "oneLineSummary": "Discussion about an automation solution involving tesseract.js.",
+    "bulletSummary": [
+      "Implemented an automation solution",
+      "Implemented the core typescript modules for pdf parsing and ocr:",
+      "Implemented a private repo under addisonjeff (not dataintegrities) to store this code",
+      "Implemented the main index file and then set up the github repo:",
+      "Implemented the main application and then set up the github repo:",
+      "Worked with tesseract.js",
+      "Worked with quickstart.md",
+      "Worked with setup.md"
+    ],
+    "paragraphSummary": "This conversation focused on an automation solution. Key files involved include tesseract.js, quickstart.md, setup.md. Additional work included the core typescript modules for pdf parsing and ocr: and a private repo under addisonjeff (not dataintegrities) to store this code. The discussion covered 284 messages with 29 main accomplishments.",
+    "messageCount": 447,
+    "lastMessageTimestamp": "2025-07-13T18:40:20.903Z"
+  },
+  {
+    "id": "ccf941c3-6d16-429a-84a0-f3ceb44c9558",
+    "project": "mongo",
+    "date": "2025-07-12T21:43:48.481Z",
+    "firstSentence": "No preview available",
+    "oneLineSummary": "0-message conversation about various topics.",
+    "bulletSummary": [
+      "0 total messages exchanged"
+    ],
+    "paragraphSummary": "A 0-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 2,
+    "lastMessageTimestamp": null
+  },
+  {
+    "id": "cf0f7c10-1028-4424-9aa9-98f3941462f2",
+    "project": "apps",
+    "date": "2025-07-12T21:35:14.955Z",
+    "firstSentence": "Can you look more in detail regarding the dynamic_drawer app in the flutter folder and build detailed documentation - especially in the lib folder.",
+    "oneLineSummary": "Discussion about detailed documentation involving menudata.json.",
+    "bulletSummary": [
+      "Implemented detailed documentation",
+      "Implemented the comprehensive documentation for the dynamic_drawer app:",
+      "Implemented comprehensive documentation for the dynamic_drawer flutter app",
+      "Implemented the vs code launch",
+      "Implemented a readme file documenting how to use these configurations:",
+      "Worked with menudata.json",
+      "Worked with documentation.md",
+      "Worked with launch.json"
+    ],
+    "paragraphSummary": "This conversation focused on detailed documentation. Key files involved include menudata.json, documentation.md, launch.json. Additional work included the comprehensive documentation for the dynamic_drawer app: and comprehensive documentation for the dynamic_drawer flutter app. The discussion covered 199 messages with 13 main accomplishments.",
+    "messageCount": 366,
+    "lastMessageTimestamp": "2025-07-12T21:35:14.913Z"
+  },
+  {
+    "id": "e8d12a23-7806-4edd-b45c-9a34d4ff7b1a",
+    "project": "flutter",
+    "date": "2025-07-12T17:30:01.652Z",
+    "firstSentence": "I want to continue documenting the signing and notarization issues.",
+    "oneLineSummary": "Discussion about zip files first, which should fix the status code 7000 errors involving notarization_log.json.",
+    "bulletSummary": [
+      "Implemented zip files first, which should fix the status code 7000 errors",
+      "Implemented a fresh log in the correct macos/ folder",
+      "Implemented a fresh log in macos/notarize",
+      "Implemented successfully: 11054282 bytes",
+      "Implemented successfully: 11054282 bytes",
+      "Worked with notarization_log.json",
+      "Worked with test_summary.md",
+      "Worked with readme-codesigningnotarization.md"
+    ],
+    "paragraphSummary": "This conversation focused on zip files first, which should fix the status code 7000 errors. Key files involved include notarization_log.json, test_summary.md, readme-codesigningnotarization.md. Additional work included a fresh log in the correct macos/ folder and a fresh log in macos/notarize. The discussion covered 149 messages with 61 main accomplishments.",
+    "messageCount": 217,
+    "lastMessageTimestamp": "2025-07-12T17:30:01.619Z"
+  },
+  {
+    "id": "b8852a1a-a706-4aa8-9479-cb79f7ca4e4f",
+    "project": "search",
+    "date": "2025-07-12T16:09:53.002Z",
+    "firstSentence": "whatever claude code did at the very end of my last 2 chats killed claude.",
+    "oneLineSummary": "Discussion about new changes to the code and asked me to test it involving config.json.",
+    "bulletSummary": [
+      "Implemented new changes to the code and asked me to test it",
+      "Implemented i should have been more thorough in understanding the full context of your previous work",
+      "Implemented comprehensive `provider-search-mongo/readme",
+      "Implemented master ecosystem overview in root `readme",
+      "Implemented `provider-search-mongo/webapi/readme",
+      "Worked with config.json",
+      "Worked with app.js",
+      "Worked with readme.md"
+    ],
+    "paragraphSummary": "This conversation focused on new changes to the code and asked me to test it. Key files involved include config.json, app.js, readme.md. Additional work included i should have been more thorough in understanding the full context of your previous work and comprehensive `provider-search-mongo/readme. The discussion covered 1020 messages with 98 main accomplishments.",
+    "messageCount": 1569,
+    "lastMessageTimestamp": "2025-07-12T16:09:52.979Z"
+  },
+  {
+    "id": "658b440b-191d-4151-8435-1162da368594",
+    "project": "search",
+    "date": "2025-07-11T21:50:55.370Z",
+    "firstSentence": "claude code crashed.",
+    "oneLineSummary": "Working with analyze-font.js, cli.js, node.js files.",
+    "bulletSummary": [
+      "Worked with analyze-font.js",
+      "Worked with cli.js",
+      "Worked with node.js",
+      "42 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation involved working with analyze-font.js, cli.js, node.js. The discussion spanned 42 messages covering file modifications and updates.",
+    "messageCount": 78,
+    "lastMessageTimestamp": "2025-07-11T21:50:55.360Z"
+  },
+  {
+    "id": "f456571d-89e9-477d-907c-3970bf29250f",
+    "project": "search",
+    "date": "2025-07-11T21:42:39.531Z",
+    "firstSentence": "can you find the utilities we have built so far to look at claude code chat threads?",
+    "oneLineSummary": "Discussion about so far to look at claude code chat threads involving server.js.",
+    "bulletSummary": [
+      "Implemented so far to look at claude code chat threads",
+      "Implemented to work with claude code chat threads",
+      "Implemented for working with claude code chat threads:",
+      "Implemented the search highlighting feature",
+      "Implemented a comprehensive guide in the utilities folder:",
+      "Worked with server.js",
+      "Worked with package.json",
+      "Worked with slackclient.js"
+    ],
+    "paragraphSummary": "This conversation focused on so far to look at claude code chat threads. Key files involved include server.js, package.json, slackclient.js. Additional work included to work with claude code chat threads and for working with claude code chat threads:. The discussion covered 1981 messages with 317 main accomplishments.",
+    "messageCount": 3050,
+    "lastMessageTimestamp": "2025-07-11T21:42:39.488Z"
+  },
+  {
+    "id": "26cf8ff0-5e80-448c-a6bb-d59c951268a2",
+    "project": "flutter",
+    "date": "2025-07-10T23:57:06.894Z",
+    "firstSentence": "I want to continue where I left off on the last thread talking about build and notarization errors and the way I was working through it with claude.",
+    "oneLineSummary": "Discussion about a todo list to continue where you left off: involving flutter_build_notes.md.",
+    "bulletSummary": [
+      "Implemented a todo list to continue where you left off:",
+      "Implemented a master \"project brief\" document that you can quickly copy-paste at the start of new threads",
+      "Implemented a github gist that you can link to both claude and chatgpt",
+      "Implemented a starter notes template for your cross-platform build setup",
+      "Implemented the error state",
+      "Worked with flutter_build_notes.md",
+      "Worked with notes.md",
+      "Worked with macvm-ios.yml"
+    ],
+    "paragraphSummary": "This conversation focused on a todo list to continue where you left off:. Key files involved include flutter_build_notes.md, notes.md, macvm-ios.yml. Additional work included a master \"project brief\" document that you can quickly copy-paste at the start of new threads and a github gist that you can link to both claude and chatgpt. The discussion covered 77 messages with 123 main accomplishments.",
+    "messageCount": 115,
+    "lastMessageTimestamp": "2025-07-10T23:57:06.755Z"
+  },
+  {
+    "id": "2b27f351-d20b-493f-bff6-b3d0907bbe85",
+    "project": "flutter",
+    "date": "2025-07-10T23:39:59.342Z",
+    "firstSentence": "do you recall the issues with macos app notarizations and we tried using both my old account and new account?",
+    "oneLineSummary": "Discussion about a dedicated readme file in the macos directory to document the codesigning and notarization details involving ios.yml.",
+    "bulletSummary": [
+      "Implemented a dedicated readme file in the macos directory to document the codesigning and notarization details",
+      "Implemented with read-only match access",
+      "Implemented by a user who has access to the data-integrities organization",
+      "Implemented the token must have access to the certificates repo",
+      "Implemented a new token with repo scope",
+      "Worked with ios.yml",
+      "Worked with token_access.json",
+      "Worked with readme-codesigningnotarization.md"
+    ],
+    "paragraphSummary": "This conversation focused on a dedicated readme file in the macos directory to document the codesigning and notarization details. Key files involved include ios.yml, token_access.json, readme-codesigningnotarization.md. Additional work included with read-only match access and by a user who has access to the data-integrities organization. The discussion covered 51 messages with 156 main accomplishments.",
+    "messageCount": 79,
+    "lastMessageTimestamp": "2025-07-10T23:39:59.204Z"
+  },
+  {
+    "id": "c75bcd8b-5d64-42f4-acb5-3bd2fbe69042",
+    "project": "mongo",
+    "date": "2025-07-09T17:44:06.984Z",
+    "firstSentence": "is the stored procedure vx_provider_location used anywhere",
+    "oneLineSummary": "Discussion about the macos app in `src-tauri/target/release/bundle/` involving claudia.js.",
+    "bulletSummary": [
+      "Implemented the macos app in `src-tauri/target/release/bundle/`",
+      "Implemented application at: /users/jeffk/developement/provider-search/claudia/src-tauri/target/release/claudia",
+      "Worked with claudia.js",
+      "Worked with documentation-checkpoint.md",
+      "Worked with readme-session-log.md",
+      "75 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation focused on the macos app in `src-tauri/target/release/bundle/`. Key files involved include claudia.js, documentation-checkpoint.md, readme-session-log.md. Additional work included application at: /users/jeffk/developement/provider-search/claudia/src-tauri/target/release/claudia. The discussion covered 75 messages with 2 main accomplishments.",
+    "messageCount": 113,
+    "lastMessageTimestamp": "2025-07-09T17:44:06.978Z"
+  },
+  {
+    "id": "38c126c1-38c4-49f7-916d-b9e7c65c8f4e",
+    "project": "claude",
+    "date": "2025-07-08T17:52:12.938Z",
+    "firstSentence": "I want to continue working on the Claude Chat History Viewer\n  project from CONTINUATION MARKER: CLAUDE-WORK-2025-07-08.",
+    "oneLineSummary": "Discussion about exactly as you wanted it involving readme.md.",
+    "bulletSummary": [
+      "Implemented exactly as you wanted it",
+      "Implemented summaries of related conversations</li>",
+      "Implemented a global map of search anchors",
+      "Implemented the search navigation feature with the following functionality:",
+      "Implemented a \"favorites\" system for important solutions",
+      "Worked with readme.md",
+      "Worked with server.js",
+      "Worked with claude-chat.css"
+    ],
+    "paragraphSummary": "This conversation focused on exactly as you wanted it. Key files involved include readme.md, server.js, claude-chat.css. Additional work included summaries of related conversations</li> and a global map of search anchors. The discussion covered 200 messages with 8 main accomplishments.",
+    "messageCount": 316,
+    "lastMessageTimestamp": "2025-07-08T17:52:12.888Z"
+  },
+  {
+    "id": "28b38396-68f5-48df-a5fb-09165b5f744d",
+    "project": "claude",
+    "date": "2025-07-08T01:06:48.158Z",
+    "firstSentence": "this is a new module that you have been helping me build from another claude code session.",
+    "oneLineSummary": "Discussion about and fix the display issue involving server.js.",
+    "bulletSummary": [
+      "Implemented and fix the display issue",
+      "Implemented and fix the chat display to show proper summaries instead of just guids",
+      "Implemented claude-sidebar",
+      "Implemented a summary of each chat thread and display it as an indented row beneath each chat entry",
+      "Implemented the generatechatsummary function:",
+      "Worked with server.js",
+      "Worked with style-dark.css",
+      "Worked with claude-sidebar.css"
+    ],
+    "paragraphSummary": "This conversation focused on and fix the display issue. Key files involved include server.js, style-dark.css, claude-sidebar.css. Additional work included and fix the chat display to show proper summaries instead of just guids and claude-sidebar. The discussion covered 448 messages with 24 main accomplishments.",
+    "messageCount": 663,
+    "lastMessageTimestamp": "2025-07-08T01:06:48.120Z"
+  },
+  {
+    "id": "ccbf57c0-be56-4849-b782-f9a81e2f95b7",
+    "project": "flutter",
+    "date": "2025-07-07T16:43:15.603Z",
+    "firstSentence": "I'm testing cross-conversation search functionality.",
+    "oneLineSummary": "Discussion about a clean summary file of your most impressed moments that you can easily share with your friend involving claude_discoveries_newsletter.md.",
+    "bulletSummary": [
+      "Implemented a clean summary file of your most impressed moments that you can easily share with your friend",
+      "Implemented searchable knowledge base",
+      "Implemented ide plugins",
+      "Implemented your **claude code discovery newsletter** for jim jones",
+      "Implemented another folder of the root provider-search repo called dailys",
+      "Worked with claude_discoveries_newsletter.md",
+      "Worked with readme.md",
+      "Worked with 2025-07-07_claude-discoveries-newsletter.md"
+    ],
+    "paragraphSummary": "This conversation focused on a clean summary file of your most impressed moments that you can easily share with your friend. Key files involved include claude_discoveries_newsletter.md, readme.md, 2025-07-07_claude-discoveries-newsletter.md. Additional work included searchable knowledge base and ide plugins. The discussion covered 213 messages with 14 main accomplishments.",
+    "messageCount": 325,
+    "lastMessageTimestamp": "2025-07-07T16:43:15.566Z"
+  },
+  {
+    "id": "fb416a88-2f1c-46dc-8838-bc06e5a18b38",
+    "project": "mongo",
+    "date": "2025-07-07T14:55:05.716Z",
+    "firstSentence": "every time I load up claude code in vscode, it starts the debugger and attaches.",
+    "oneLineSummary": "Discussion about clear documentation involving launch.json.",
+    "bulletSummary": [
+      "Implemented clear documentation",
+      "Implemented comprehensive documentation",
+      "Implemented a shared documentation file that both can read",
+      "Implemented github actions workflows** or other configuration files",
+      "Implemented a reference file in the current project that points to the provider-search repository location",
+      "Worked with launch.json",
+      "Worked with node.js",
+      "Worked with readme.md"
+    ],
+    "paragraphSummary": "This conversation focused on clear documentation. Key files involved include launch.json, node.js, readme.md. Additional work included comprehensive documentation and a shared documentation file that both can read. The discussion covered 125 messages with 10 main accomplishments.",
+    "messageCount": 208,
+    "lastMessageTimestamp": "2025-07-07T14:55:05.686Z"
+  },
+  {
+    "id": "aa79d121-53b5-414a-b3cb-49ded44fbef4",
+    "project": "flutter",
+    "date": "2025-07-07T06:46:27.924Z",
+    "firstSentence": "first question, as we finish a chat, do they get saved away somewhere so I can refer back to them or do searches myself?",
+    "oneLineSummary": "31-message conversation about various topics.",
+    "bulletSummary": [
+      "31 total messages exchanged"
+    ],
+    "paragraphSummary": "A 31-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 53,
+    "lastMessageTimestamp": "2025-07-07T06:46:27.898Z"
+  },
+  {
+    "id": "bef7ec0a-1021-4d16-ae78-6ba8630095fb",
+    "project": "flutter",
+    "date": "2025-07-07T06:41:07.041Z",
+    "firstSentence": "settings",
+    "oneLineSummary": "Working with pubspec.yaml, analysis_options.yaml, build.yaml files.",
+    "bulletSummary": [
+      "Worked with pubspec.yaml",
+      "Worked with analysis_options.yaml",
+      "Worked with build.yaml",
+      "23 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation involved working with pubspec.yaml, analysis_options.yaml, build.yaml. The discussion spanned 23 messages covering file modifications and updates.",
+    "messageCount": 36,
+    "lastMessageTimestamp": "2025-07-07T06:41:07.040Z"
+  },
+  {
+    "id": "b1c2f5b9-ca6b-434b-a162-5b5ae6d93fa1",
+    "project": "mongo",
+    "date": "2025-07-07T04:57:35.262Z",
+    "firstSentence": "So you already understand everything documented when we in the provider-search-flutter project?",
+    "oneLineSummary": "Discussion about app, as that is what helps create the different collections involving node.js.",
+    "bulletSummary": [
+      "Implemented app, as that is what helps create the different collections",
+      "Implemented app to understand the database schema and collections",
+      "Implemented through the `searchdoctorscriteria` class (lines 326-1417), which includes:",
+      "Implemented searchdoctorscriteria instance",
+      "Implemented on the web server",
+      "Worked with node.js",
+      "Worked with app.js",
+      "Worked with searchdoctors.js"
+    ],
+    "paragraphSummary": "This conversation focused on app, as that is what helps create the different collections. Key files involved include node.js, app.js, searchdoctors.js. Additional work included app to understand the database schema and collections and through the `searchdoctorscriteria` class (lines 326-1417), which includes:. The discussion covered 446 messages with 321 main accomplishments.",
+    "messageCount": 633,
+    "lastMessageTimestamp": "2025-07-07T04:57:35.234Z"
+  },
+  {
+    "id": "7facfa80-faec-471b-9896-e4248e4dbb00",
+    "project": "flutter",
+    "date": "2025-07-06T06:23:57.892Z",
+    "firstSentence": "CONTEXT: Working on macOS notarization error 7000 fix\n\n  STATUS: We split notarization to use old working account while keeping new\n  account for everything else.",
+    "oneLineSummary": "Discussion about the app and pkg files involving readme.md.",
+    "bulletSummary": [
+      "Implemented the app and pkg files",
+      "Implemented all the necessary files",
+      "Implemented successfully: 11054315 bytes",
+      "Implemented with certs/profiles from the new account (or are the pkg, dmg, zip using the older certs too)",
+      "Implemented entirely with the old account's certificates and notarized with the old account's api key",
+      "Worked with readme.md",
+      "Worked with settings.json",
+      "Worked with some-file.ts"
+    ],
+    "paragraphSummary": "This conversation focused on the app and pkg files. Key files involved include readme.md, settings.json, some-file.ts. Additional work included all the necessary files and successfully: 11054315 bytes. The discussion covered 2023 messages with 217 main accomplishments.",
+    "messageCount": 2902,
+    "lastMessageTimestamp": "2025-07-06T06:23:57.861Z"
+  },
+  {
+    "id": "035a9c06-684e-4b20-bf74-bbb2a13fd63b",
+    "project": "flutter",
+    "date": "2025-07-04T21:08:15.847Z",
+    "firstSentence": "just a test",
+    "oneLineSummary": "Discussion about an alias in your shell configuration: involving readme.md.",
+    "bulletSummary": [
+      "Implemented an alias in your shell configuration:",
+      "Implemented an alias called \"notarizations\" that runs the 10-dev-environment-variables",
+      "Worked with readme.md",
+      "113 total messages exchanged"
+    ],
+    "paragraphSummary": "This conversation focused on an alias in your shell configuration:. Key files involved include readme.md. Additional work included an alias called \"notarizations\" that runs the 10-dev-environment-variables. The discussion covered 113 messages with 2 main accomplishments.",
+    "messageCount": 175,
+    "lastMessageTimestamp": "2025-07-04T21:08:15.824Z"
+  },
+  {
+    "id": "edbefc7d-c786-4712-adad-e4cffe70acd1",
+    "project": "flutter",
+    "date": "2025-07-04T20:15:33.270Z",
+    "firstSentence": "Caveat: The messages below were generated by the user while running local commands.",
+    "oneLineSummary": "Discussion about new lines without sending involving keybindings.json.",
+    "bulletSummary": [
+      "Implemented new lines without sending",
+      "Implemented the **a7d4d4z8bm** key as a test to see if the api key was the problem",
+      "Implemented the a7d4d4z8bm key to test if the api key itself was the root cause",
+      "Implemented so far by examining my project will continue to build as we do more with this project",
+      "Implemented of your project",
+      "Worked with keybindings.json",
+      "Worked with readme.md",
+      "Worked with settings.json"
+    ],
+    "paragraphSummary": "This conversation focused on new lines without sending. Key files involved include keybindings.json, readme.md, settings.json. Additional work included the **a7d4d4z8bm** key as a test to see if the api key was the problem and the a7d4d4z8bm key to test if the api key itself was the root cause. The discussion covered 150 messages with 25 main accomplishments.",
+    "messageCount": 215,
+    "lastMessageTimestamp": "2025-07-04T20:15:33.245Z"
+  },
+  {
+    "id": "80721406-4a5c-4241-a2de-52b24294e83e",
+    "project": "flutter",
+    "date": "2025-07-04T20:14:36.009Z",
+    "firstSentence": "add-dir",
+    "oneLineSummary": "2-message conversation about various topics.",
+    "bulletSummary": [
+      "2 total messages exchanged"
+    ],
+    "paragraphSummary": "A 2-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 3,
+    "lastMessageTimestamp": "2025-07-04T20:14:36.008Z"
+  },
+  {
+    "id": "36109544-889f-4750-9b0b-b14767caeb9b",
+    "project": "flutter",
+    "date": "2025-07-04T18:15:46.469Z",
+    "firstSentence": "add-dir",
+    "oneLineSummary": "6-message conversation about various topics.",
+    "bulletSummary": [
+      "6 total messages exchanged"
+    ],
+    "paragraphSummary": "A 6-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 11,
+    "lastMessageTimestamp": "2025-07-04T18:15:46.467Z"
+  },
+  {
+    "id": "c696aa13-1979-4eca-b7bc-8e20e901e459",
+    "project": "flutter",
+    "date": "2025-07-04T18:12:47.944Z",
+    "firstSentence": "add-dir",
+    "oneLineSummary": "4-message conversation about various topics.",
+    "bulletSummary": [
+      "4 total messages exchanged"
+    ],
+    "paragraphSummary": "A 4-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 7,
+    "lastMessageTimestamp": "2025-07-04T18:12:47.943Z"
+  },
+  {
+    "id": "64354332-b1d7-4299-bfc2-d9ccc7b2713f",
+    "project": "jeffk",
+    "date": "2025-07-04T16:52:22.696Z",
+    "firstSentence": "Caveat: The messages below were generated by the user while running local commands.",
+    "oneLineSummary": "3-message conversation about various topics.",
+    "bulletSummary": [
+      "3 total messages exchanged"
+    ],
+    "paragraphSummary": "A 3-message conversation that began with \"...\". The discussion covered various topics and technical implementations.",
+    "messageCount": 3,
+    "lastMessageTimestamp": "2025-07-04T16:52:22.667Z"
+  }
+]

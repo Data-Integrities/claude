@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat <%= chatId.substring(0, 8) %> - Claude History</title>
+    <title>Chat <%= chatId.substring(0, 8) %> - <%= projectName %> - Claude History</title>
     <link rel="stylesheet" href="/css/claude-chat.css">
 </head>
 <body>
@@ -11,14 +11,36 @@
         <header class="claude-header">
             <div class="header-top">
                 <a href="/" class="back-link">← Back</a>
-                <span class="chat-date"><%= moment(messages[0]?.timestamp || new Date()).format('MMM D, YYYY h:mm A') %></span>
+                <div class="header-center">
+                    <span class="project-badge">📁 <%= projectName %></span>
+                    <span class="chat-date">Chat started <%= moment(messages[0]?.timestamp || new Date()).format('MMM D, YYYY h:mm A') %> / <%= messageCount %> messages</span>
+                </div>
+                <div class="header-spacer"></div>
             </div>
             <div class="header-middle">
-                <h1 class="chat-title"><%= messages.find(m => m.role === 'user')?.content?.substring(0, 100) || 'Chat' %></h1>
-                <span class="message-count"><%= messageCount %> messages</span>
+                <% 
+                // Use original messages (before highlighting) for clean title
+                const fullUserMessage = (originalMessages || messages).find(m => m.role === 'user')?.content || 'Chat';
+                // Extract first sentence (look for first period, question mark, or exclamation mark)
+                const firstSentenceMatch = fullUserMessage.match(/^[^.!?]*[.!?]/);
+                const firstSentence = firstSentenceMatch ? firstSentenceMatch[0].trim() : fullUserMessage.split('\n')[0].trim();
+                const isLongTitle = firstSentence.length > 100;
+                %>
+                <h1 class="chat-title <%= isLongTitle ? 'long-title' : '' %>"><%= firstSentence %></h1>
             </div>
             <div class="header-bottom">
-                <!-- Search removed - users can use browser Ctrl+F -->
+                <div class="header-actions">
+                    <% if (searchTerm && searchCount > 0) { %>
+                        <div class="search-navigation">
+                            <span class="search-info">
+                                <span id="currentSearchIndex">1</span>/<%= searchCount %> occurrences of "<%= searchTerm %>"
+                            </span>
+                            <button class="search-nav-btn" id="searchPrev" title="Previous match">↑</button>
+                            <button class="search-nav-btn" id="searchNext" title="Next match">↓</button>
+                        </div>
+                    <% } %>
+                    <a href="/download/<%= projectDir %>/<%= chatId %><%= searchTerm ? '?search=' + encodeURIComponent(searchTerm) : '' %>" class="download-btn" title="Download as Markdown">📥 Download</a>
+                </div>
             </div>
         </header>
         
@@ -47,5 +69,121 @@
         </main>
     </div>
     <script src="/js/chat-search.js"></script>
+    
+    <% if (searchTerm && searchCount > 0) { %>
+    <script>
+        // Search navigation functionality
+        window.searchNav = {
+            searchAnchors: {},
+            currentIndex: 1,
+            totalCount: <%= searchCount %>
+        };
+        
+        // Scroll to a specific search_x anchor by number
+        window.goto = function(n) {
+            console.log('goto called with n =', n, 'currentIndex before =', window.searchNav.currentIndex, 'totalCount =', window.searchNav.totalCount);
+            console.log('searchAnchors available:', Object.keys(window.searchNav.searchAnchors));
+            
+            const anchor = window.searchNav.searchAnchors[n];
+            console.log('Anchor for index', n, ':', anchor);
+            
+            if (anchor) {
+                // Remove current highlight from all
+                Object.values(window.searchNav.searchAnchors).forEach(a => {
+                    console.log('Removing current from:', a.id, 'has current?', a.classList.contains('current'));
+                    a.classList.remove('current');
+                });
+                
+                // Add current highlight
+                anchor.classList.add('current');
+                console.log('Added current to:', anchor.id, 'has current?', anchor.classList.contains('current'));
+                
+                // Scroll into view
+                anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Update current index
+                window.searchNav.currentIndex = n;
+                document.getElementById('currentSearchIndex').textContent = n;
+                
+                console.log('After goto: currentIndex =', window.searchNav.currentIndex);
+            } else {
+                console.error('Anchor not found for index:', n, 'Available indices:', Object.keys(window.searchNav.searchAnchors));
+            }
+        }
+        
+        // Wait for DOM to be fully loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            // Populate the search anchors map
+            const anchors = document.querySelectorAll('a[id^="search_"]');
+            console.log('Found', anchors.length, 'search anchors');
+            anchors.forEach(anchor => {
+                const match = anchor.id.match(/^search_(\d+)$/);
+                if (match) {
+                    const index = parseInt(match[1], 10);
+                    window.searchNav.searchAnchors[index] = anchor;
+                    console.log('Added anchor:', index, anchor.id);
+                }
+            });
+            console.log('Total searchAnchors populated:', Object.keys(window.searchNav.searchAnchors).length);
+            console.log('window.searchNav state:', window.searchNav);
+            
+            // Go to first occurrence automatically
+            if (window.searchNav.searchAnchors[1]) {
+                setTimeout(() => window.goto(1), 100); // Small delay to ensure smooth scroll
+            }
+            
+            // Navigation buttons - Down arrow goes to next
+            const nextBtn = document.getElementById('searchNext');
+            const prevBtn = document.getElementById('searchPrev');
+            
+            console.log('Next button:', nextBtn);
+            console.log('Prev button:', prevBtn);
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    console.log('Next clicked. Current index before:', window.searchNav.currentIndex);
+                    let nextIndex = window.searchNav.currentIndex + 1;
+                    if (nextIndex > window.searchNav.totalCount) {
+                        nextIndex = 1; // Wrap to beginning
+                    }
+                    console.log('Next index will be:', nextIndex);
+                    window.goto(nextIndex);
+                });
+            }
+            
+            // Navigation buttons - Up arrow goes to previous
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    console.log('Prev clicked. Current index before:', window.searchNav.currentIndex);
+                    let prevIndex = window.searchNav.currentIndex - 1;
+                    if (prevIndex < 1) {
+                        prevIndex = window.searchNav.totalCount; // Wrap to end
+                    }
+                    console.log('Prev index will be:', prevIndex);
+                    window.goto(prevIndex);
+                });
+            }
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'n' && (e.ctrlKey || e.metaKey)) {
+                    e.preventDefault();
+                    document.getElementById('searchNext').click();
+                } else if (e.key === 'p' && (e.ctrlKey || e.metaKey)) {
+                    e.preventDefault();
+                    document.getElementById('searchPrev').click();
+                }
+                // Arrow key navigation
+                else if (e.key === 'ArrowDown' && e.altKey) {
+                    e.preventDefault();
+                    document.getElementById('searchNext').click();
+                } else if (e.key === 'ArrowUp' && e.altKey) {
+                    e.preventDefault();
+                    document.getElementById('searchPrev').click();
+                }
+            });
+        });
+    </script>
+    <% } %>
 </body>
 </html>

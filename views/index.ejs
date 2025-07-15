@@ -9,11 +9,44 @@
 <body>
     <div class="claude-container">
         <header class="main-header">
-            <h1>🤖 Claude Chat History</h1>
+            <h1>🤖 Claude Chat History <a href="/history-index.json" class="json-link" title="View history index as JSON">📊</a></h1>
             <p class="subtitle">Browse your Claude Code conversations</p>
+            <% if (analysisResults && analysisResults.numberOfChatsUpdated > 0) { %>
+                <p class="update-notification" onclick="showAnalysisDetails()">
+                    <%= analysisResults.numberOfChatsUpdated %> conversation<%= analysisResults.numberOfChatsUpdated > 1 ? 's' : '' %> updated
+                </p>
+            <% } %>
         </header>
         
+        <div id="analysis-results" class="analysis-results" style="display: none;">
+            <div class="results-header">
+                <h3>History Updated</h3>
+                <button class="results-close" onclick="closeResults()">✕</button>
+            </div>
+            <div class="results-content">
+                <% if (analysisResults && analysisResults.numberOfChatsUpdated > 0) { %>
+                    <div class="update-summary">
+                        <p><strong><%= analysisResults.numberOfChatsUpdated %></strong> chat<%= analysisResults.numberOfChatsUpdated > 1 ? 's' : '' %> updated</p>
+                        <p class="timing">Check: <%= analysisResults.checkDuration %>ms | Analysis: <%= analysisResults.claudeSummaryDuration %>ms | Total: <%= analysisResults.totalDuration %>ms</p>
+                    </div>
+                    <div class="updated-chats">
+                        <% analysisResults.chatsAnalyzed.forEach(chat => { %>
+                            <div class="updated-chat">
+                                <span class="project-name"><%= chat.project %></span>
+                                <span class="chat-preview"><%= chat.firstMessage %></span>
+                                <span class="duration"><%= chat.duration %>ms</span>
+                            </div>
+                        <% }) %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        
         <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number"><%= stats.totalProjects %></div>
+                <div class="stat-label">Total Projects</div>
+            </div>
             <div class="stat-card">
                 <div class="stat-number"><%= stats.totalConversations %></div>
                 <div class="stat-label">Total Conversations</div>
@@ -35,43 +68,130 @@
             </div>
             
             <div class="chat-list">
-            <% chats.forEach(chat => { %>
-                <div class="chat-card" 
-                     data-title="<%= chat.firstMessage || '' %>"
-                     data-summary="<%= chat.summary.replace(/<[^>]*>/g, '') %>"
-                     data-searchable="<%= chat.searchableText || '' %>"
-                     data-date="<%= chat.modifiedTime %>">
-                    <a href="/chat/<%= chat.id %>" class="chat-link">
-                        <div class="chat-content">
-                            <div class="chat-row">
-                                <span class="chat-date"><%= moment(chat.modifiedTime).format('MMM D, YYYY h:mm A') %></span>
-                                <span class="chat-separator"> - </span>
-                                <span class="chat-title">
-                                    <%= chat.firstMessage || 'Untitled Chat' %>
-                                </span>
+            <% sortedProjects.forEach(projectName => { %>
+                <div class="project-group">
+                    <h3 class="project-name">📁 <%= projectName %></h3>
+                    <% chatsByProject[projectName].forEach(chat => { %>
+                        <div class="chat-card" 
+                             data-title="<%= chat.firstMessage || '' %>"
+                             data-summary="<%= chat.summary.replace(/<[^>]*>/g, '') %>"
+                             data-searchable="<%= chat.searchableText || '' %>"
+                             data-date="<%= chat.modifiedTime %>">
+                            <a href="/chat/<%= chat.projectDir %>/<%= chat.id %>" class="chat-link">
+                                <div class="chat-content">
+                                    <div class="chat-row">
+                                        <span class="chat-date"><%= moment(chat.modifiedTime).format('MMM D, YYYY h:mm A') %></span>
+                                        <span class="chat-separator"> - </span>
+                                        <span class="chat-title">
+                                            <% if (chat.enhancedSummary && chat.enhancedSummary.oneLine) { %>
+                                                <%= chat.enhancedSummary.oneLine %>
+                                            <% } else { %>
+                                                <%= chat.firstMessage || 'Untitled Chat' %>
+                                            <% } %>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="chat-summary">
+                                <div class="summary-header">💡 Summary</div>
+                                <div class="summary-text">
+                                    <% if (chat.enhancedSummary) { %>
+                                        <% chat.enhancedSummary.bullets.forEach(bullet => { %>
+                                            <div class="bullet-item">• <%= bullet %></div>
+                                        <% }) %>
+                                    <% } else { %>
+                                        <%- chat.summary %>
+                                    <% } %>
+                                </div>
+                            </div>
+                            <div class="chat-footer">
+                                <div class="footer-left">
+                                    <span class="message-count">💬 <%= chat.messageCount %> messages</span>
+                                    <a href="/download/<%= chat.projectDir %>/<%= chat.id %>" class="download-link" title="Download as Markdown">📥 Download</a>
+                                </div>
+                            </div>
+                            <div class="match-count-line" style="display: none;">
+                                <span class="match-count"></span>
                             </div>
                         </div>
-                    </a>
-                    <div class="chat-summary">
-                        <div class="summary-header">💡 Summary</div>
-                        <div class="summary-text">
-                            <%- chat.summary %>
-                        </div>
-                    </div>
-                    <div class="chat-footer">
-                        <div class="footer-left">
-                            <span class="message-count">💬 <%= chat.messageCount %> messages</span>
-                            <a href="/download/<%= chat.id %>" class="download-link" title="Download as Markdown">📥 Download</a>
-                        </div>
-                    </div>
-                    <div class="match-count-line" style="display: none;">
-                        <span class="match-count"></span>
-                    </div>
+                    <% }) %>
                 </div>
             <% }) %>
             </div>
         </div>
     </div>
     <script src="/js/search.js"></script>
+    <script>
+        // Close results function
+        function closeResults() {
+            const resultsDiv = document.getElementById('analysis-results');
+            resultsDiv.style.display = 'none';
+        }
+        
+        // Show analysis details
+        function showAnalysisDetails() {
+            const resultsDiv = document.getElementById('analysis-results');
+            resultsDiv.style.display = 'block';
+        }
+        
+        // Only set up analyze link if it exists (it won't if updates were already done)
+        const analyzeLink = document.querySelector('.analyze-link');
+        if (analyzeLink) {
+            analyzeLink.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const link = e.target;
+            const originalText = link.textContent;
+            
+            try {
+                link.textContent = '⏳';
+                link.style.cursor = 'wait';
+                
+                const response = await fetch('/analyze-chats');
+                const data = await response.json();
+                
+                // Show results in the results box
+                const resultsDiv = document.getElementById('analysis-results');
+                const resultsContent = resultsDiv.querySelector('.results-content');
+                
+                // Format the results in a human-readable way
+                let content = '';
+                if (data.numberOfChatsUpdated === 0) {
+                    content = '<p class="no-updates">All chats are already up to date!</p>';
+                    resultsDiv.dataset.hasUpdates = 'false';
+                } else {
+                    content = `
+                        <div class="update-summary">
+                            <p><strong>${data.numberOfChatsUpdated}</strong> chat${data.numberOfChatsUpdated > 1 ? 's' : ''} updated</p>
+                            <p class="timing">Check: ${data.checkDuration}ms | Analysis: ${data.claudeSummaryDuration}ms | Total: ${data.totalDuration}ms</p>
+                        </div>
+                        <div class="updated-chats">
+                            ${data.chatsAnalyzed.map(chat => `
+                                <div class="updated-chat">
+                                    <span class="project-name">${chat.project}</span>
+                                    <span class="chat-preview">${chat.firstMessage || 'No preview available'}</span>
+                                    <span class="duration">${chat.duration}ms</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    resultsDiv.dataset.hasUpdates = 'true';
+                }
+                
+                resultsContent.innerHTML = content;
+                resultsDiv.style.display = 'block';
+                
+            } catch (error) {
+                const resultsDiv = document.getElementById('analysis-results');
+                const resultsContent = resultsDiv.querySelector('.results-content');
+                resultsContent.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+                resultsDiv.style.display = 'block';
+                resultsDiv.dataset.hasUpdates = 'false';
+            } finally {
+                link.textContent = originalText;
+                link.style.cursor = 'pointer';
+            }
+            });
+        }
+    </script>
 </body>
 </html>

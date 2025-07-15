@@ -65,10 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
         findInputContainer.style.display = 'none';
         findInput.value = '';
         findResultsCount.textContent = '';
+        currentSearchTerm = '';
         
-        // Hide all match count lines
-        document.querySelectorAll('.match-count-line').forEach(line => {
-            line.style.display = 'none';
+        // Show all chat cards and hide match count lines
+        chatCards.forEach(card => {
+            card.style.display = 'block';
+            card.querySelector('.match-count-line').style.display = 'none';
+            // Reset download links to original URLs
+            const downloadLink = card.querySelector('.download-link');
+            if (downloadLink) {
+                const chatId = downloadLink.href.split('/download/')[1].split('?')[0];
+                downloadLink.href = `/download/${chatId}`;
+            }
         });
         
         // Restore original order
@@ -94,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
             chatCards.forEach(card => {
                 card.style.display = 'block';
                 card.querySelector('.match-count-line').style.display = 'none';
+                // Reset download links to original URLs
+                const downloadLink = card.querySelector('.download-link');
+                if (downloadLink) {
+                    const chatId = downloadLink.href.split('/download/')[1].split('?')[0];
+                    downloadLink.href = `/download/${chatId}`;
+                }
             });
             findResultsCount.textContent = '';
             restoreOriginalOrder();
@@ -126,6 +140,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 matchCount.textContent = `🔍 ${matches} match${matches > 1 ? 'es' : ''} found`;
                 matchCountLine.style.display = 'block';
                 card.style.display = 'block';
+                
+                // Update download link to include search term
+                const downloadLink = card.querySelector('.download-link');
+                if (downloadLink) {
+                    const chatId = downloadLink.href.split('/download/')[1].split('?')[0];
+                    downloadLink.href = `/download/${chatId}?search=${encodeURIComponent(searchTerm)}`;
+                }
             } else {
                 // Hide non-matching chats
                 card.style.display = 'none';
